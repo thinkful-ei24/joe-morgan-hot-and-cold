@@ -1,0 +1,18 @@
+.container {
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.inputForm {
+  margin: 0 auto;
+}
+
+.inputForm button {
+  display: block;
+  margin: 0 auto;
+}
+
+.inputForm input {
+  display: block;
+  margin: 0 auto;
+}

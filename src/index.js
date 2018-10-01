@@ -1,12 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// Components
-import Navigation from './components/navigation';
+import App from './App';
 
-ReactDOM.render(
-  (
-    <Navigation />
-  ),
+ReactDOM.render(<App />,
   document.getElementById('root')
 );

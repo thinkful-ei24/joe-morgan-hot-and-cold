@@ -1,0 +1,32 @@
+.gamebox-momma {
+  background-color: #C52C42;
+  border-radius: 8px;
+  height: 25em;
+  width: 100%;
+  margin: 10px 2px;
+}
+
+.gamebox-kid1 {
+  width: 100%;
+  height: 80px;
+  border-radius: 10px;
+}
+
+.gamebox-kid1 p {
+  color: white;
+  line-height: 80px;
+  text-align: center;
+  font-size: 1.5em;
+}
+.gamebox-kid2 {
+  background-color: rgb(62, 70, 104);
+  width: 100%;
+  height: 240px;
+}
+
+.gamebox-kid3 {
+  background-color: rgb(62, 156, 156);
+  width: 100%;
+  height: 80px;
+  border-radius: 0px 0px 5px 5px;
+}
