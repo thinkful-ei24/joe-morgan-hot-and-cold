@@ -1,0 +1,27 @@
+.navigation {
+  width: 100%;
+  position: relative;
+}
+
+.navigation-link {
+  color: white;
+  font-size: 1.5em;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+.navigation-link:first-child {
+  float: left;
+}
+
+.navigation-link:last-child {
+  float: right;
+}
+
+.navigation-link:link, .navigation-link:visited {
+  text-decoration: none;
+}
+
+.navigation-link:hover {
+  text-decoration: underline;
+}
