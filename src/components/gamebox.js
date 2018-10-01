@@ -34,22 +34,45 @@ export default class Gamebox extends React.Component {
       return this.setState({inputValue: ''});
     }
     // Compare their guess to the number in state
-    if (guess === this.state.correctNumber) {
-      return this.setState({guessWarmth: 'You Won. Click new game to play again!'});
-    }
+    // if (guess === this.state.correctNumber) {
+    //   return this.setState({guessWarmth: 'You Won. Click new game to play again!'});
+    // }
     // Add the input to our guesses array, and set the input to an empty string
+    // set the correct guessWarmth (i.e. hot or cold)
+    const distance = Math.abs(this.state.correctNumber - guess);
+
+    let warmth;
+    
+    // correct: equals 0
+    if(distance === 0) {
+      warmth = 'You Won. Click new game to play again!'
+    }
+    // hot: within 10
+    else if(distance <= 10) {
+      warmth = 'hot';
+    }
+    // kinda hot: within 15
+    else if(distance <= 15) {
+      warmth = 'kinda hot';
+    }
+    // kinda warm: within 20
+    else if(distance <= 20) {
+      warmth = 'kinda warm';
+    }
+    // less than warm: within 25
+    else if(distance <= 25) {
+      warmth = 'less than warm';
+    }
+    // cold: >26
+    else if(distance > 26) {
+      warmth = 'cold'
+    }
+
     this.setState({
+      guessWarmth: warmth,
       guesses: [...this.state.guesses, guess],
       inputValue: ''
     });
-    // set the correct guessWarmth (i.e. hot or cold)
-    const distance = Math.abs(correctNumber - guess);
-      // hot: within 10
-      // kinda hot: within 15
-      // kinda warm: within 20
-      // less than warm: within 25
-      // cold: >26
-        // Add the number to our past guesses
   }
 
   renderGuesses = () => {
